@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+</head>
+
+<body>
+
+	<div class="page">
+		<header class="header">
+			<div class="wrapper">
+				<div class="header__logo">
+					<a href="" onclick="$(this).attr('href', document.location.origin)">
+						<img src="img/logo.png" alt="logo">
+					</a>
+				</div>
+				<div class="header__text">
+					<p>Производим и осуществляем монтаж каминов кантри, рустик, шале <br> и прованс под ключ с дымоходами и топками. Работаем с 2000 года</p>
+				</div>
+				<div class="header__contact">
+					<a href="tel:71234567890">7 (123) 456 78 90</a>
+					<a href="#modal__cb" class="btn js-modalOpen">Написать нам</a>
+				</div>
+			</div>
+		</header>
+
+		<div class="content">
+			<div class="wrapper">
+				<div class="intro">
+					<h2 class="title">Пройдите опрос за 1 минуту <span>и узнайте стоимость вашего камина!</span></h2>
+					<div class="intro__info">
+						<div class="video">
+							<iframe width="470" src="https://www.youtube.com/embed/ABmq__gq1UQ" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class="info__window">
+							<h4 class="info__title">Ответьте на 5 вопросов и получите</h4>
+							<p>Стоимость Вашей облицовки или портала <br> Каталог и прайс-лист <br> Список из 7 ошибок которые допускают при заказе камина</p>
+							<a href="" class="btn js-stepStart">Пройти опрос</a>
+						</div>
+					</div>
+				</div>
+				<div class="interview">
+					<div class="left_side">
+						<div class="info__window">
+							<h4 class="info__title">Ответьте на вопросы до конца и получите персональную скидку на все работы</h4>
+							<span class="discount__counter">10 000</span>
+						</div>
+						<div class="info__window cb__form">
+							<h4 class="info__title">Обратный звонок</h4>
+							<form>
+								<input type="text" placeholder="Имя">
+								<input type="text" placeholder="Телефон">
+								<button class="btn">Позвони мне</button>
+							</form>
+						</div>
+					</div>
+					<div class="right_side">
+						<div class="progress">
+							<div class="progress__step">Вопрос <span class="step__count">1</span> из 5</div>
+							<div class="progress__bar"><span class="progress__scale" style="width:0%"></span></div>
+						</div>
+						<form class="interview__form">
+							<div class="step">
+								<h3 class="step__title">В каком доме планируется камин?</h3>
+								<div class="step__list">
+									<label class="step__item">
+										<input type="radio" name="house" value="wood">
+										<span class="step__view">
+											<img src="img/step-1/house-1.jpg" alt="house">
+											<span class="step__descr"><span>В деревянном</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="house" value="stone">
+										<span class="step__view">
+											<img src="img/step-1/house-2.jpg" alt="house">
+											<span class="step__descr"><span>В каменном</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="house" value="street">
+										<span class="step__view">
+											<img src="img/step-1/house-3.jpg" alt="house">
+											<span class="step__descr"><span>Уличный камин</span></span>
+										</span>
+									</label>
+								</div>
+								<a href="" class="btn js-nextStep disabled">Далее</a>
+							</div>
+							<div class="step">
+								<h3 class="step__title">Какая топка будет у вашего камина?</h3>
+								<div class="step__list">
+									<label class="step__item">
+										<input type="radio" name="firebox" value="pryamoe">
+										<span class="step__view">
+											<img src="img/step-2/firebox-1.jpg" alt="firebox">
+											<span class="step__descr"><span>Прямое стекло</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="firebox" value="uglovoe">
+										<span class="step__view">
+											<img src="img/step-2/firebox-2.jpg" alt="firebox">
+											<span class="step__descr"><span>Угловое стекло</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="firebox" value="3-sloya">
+										<span class="step__view">
+											<img src="img/step-2/firebox-3.jpg" alt="firebox">
+											<span class="step__descr"><span>Трехстороннее стекло</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="firebox" value="2-sloya">
+										<span class="step__view">
+											<img src="img/step-2/firebox-4.jpg" alt="firebox">
+											<span class="step__descr"><span>Двухстороннее стекло</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="firebox" value="prisma">
+										<span class="step__view">
+											<img src="img/step-2/firebox-5.jpg" alt="firebox">
+											<span class="step__descr"><span>Призматичное стекло</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="firebox" value="oval">
+										<span class="step__view">
+											<img src="img/step-2/firebox-6.jpg" alt="firebox">
+											<span class="step__descr"><span>Закругленное стекло</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="firebox" value="open">
+										<span class="step__view">
+											<img src="img/step-2/firebox-7.jpg" alt="firebox">
+											<span class="step__descr"><span>Открытая топка</span></span>
+										</span>
+									</label>
+								</div>
+								<a href="" class="btn js-nextStep disabled">Далее</a>
+							</div>
+							<div class="step">
+								<h3 class="step__title">Из какого материала будет ваш камин?</h3>
+								<div class="step__list">
+									<label class="step__item">
+										<input type="radio" name="stuff" value="peschannik,rakushnyak,izvest">
+										<span class="step__view">
+											<img src="img/step-3/stuff-1.jpg" alt="stuff">
+											<span class="step__descr"><span>Песчаник или Ракушечник или Известняк</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="stuff" value="dolomit,shungit">
+										<span class="step__view">
+											<img src="img/step-3/stuff-2.jpg" alt="stuff">
+											<span class="step__descr"><span>Доломит, Шунгит</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="stuff" value="mramor,granit,travertin">
+										<span class="step__view">
+											<img src="img/step-3/stuff-3.jpg" alt="stuff">
+											<span class="step__descr"><span>Мрамор, Гранит, Травертин</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="stuff" value="onyx,calcit,half-precious">
+										<span class="step__view">
+											<img src="img/step-3/stuff-4.jpg" alt="stuff">
+											<span class="step__descr"><span>Оникс, Кальцит, Полудрагоценный камень</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="stuff" value="different-stone">
+										<span class="step__view">
+											<img src="img/step-3/stuff-5.jpg" alt="stuff">
+											<span class="step__descr"><span>Камин из разного камня</span></span>
+										</span>
+									</label>
+								</div>
+								<a href="" class="btn js-nextStep disabled">Далее</a>
+							</div>
+							<div class="step">
+								<h3 class="step__title">В каком стиле будет ваш камин?</h3>
+								<div class="step__list">
+									<label class="step__item">
+										<input type="radio" name="style" value="cantry,rustin,provans,shape">
+										<span class="step__view">
+											<img src="img/step-4/style-1.jpg" alt="style">
+											<span class="step__descr"><span>Кантри, Рустин, Прованс, Шале</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="style" value="classic">
+										<span class="step__view">
+											<img src="img/step-4/style-2.jpg" alt="style">
+											<span class="step__descr"><span>Классика</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="style" value="art-deko">
+										<span class="step__view">
+											<img src="img/step-4/style-3.jpg" alt="style">
+											<span class="step__descr"><span>АртДеко</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="style" value="hi-tech">
+										<span class="step__view">
+											<img src="img/step-4/style-4.jpg" alt="style">
+											<span class="step__descr"><span>Hi-Tech <br> (Современный стиль)</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="style" value="modern">
+										<span class="step__view">
+											<img src="img/step-4/style-5.jpg" alt="style">
+											<span class="step__descr"><span>Модерн</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="style" value="japan">
+										<span class="step__view">
+											<img src="img/step-4/style-6.jpg" alt="style">
+											<span class="step__descr"><span>Японский</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="style" value="podvesnoi">
+										<span class="step__view">
+											<img src="img/step-4/style-7.jpg" alt="style">
+											<span class="step__descr"><span>Подвесной</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="style" value="island">
+										<span class="step__view">
+											<img src="img/step-4/style-8.jpg" alt="style">
+											<span class="step__descr"><span>Островной</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="style" value="sculpture">
+										<span class="step__view">
+											<img src="img/step-4/style-9.jpg" alt="style">
+											<span class="step__descr"><span>Скульптурный</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="style" value="other">
+										<span class="step__view">
+											<img src="img/step-4/style-10.jpg" alt="style">
+											<span class="step__descr"><span>Другой</span></span>
+										</span>
+									</label>
+								</div>
+								<a href="" class="btn js-nextStep disabled">Далее</a>
+							</div>
+							<div class="step">
+								<h3 class="step__title">Когда ваш камин должен быть готов?</h3>
+								<div class="step__list">
+									<label class="step__item">
+										<input type="radio" name="time" value="в ближайщее">
+										<span class="step__view">
+											<span class="step__descr"><span>В ближайшее время</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="time" value="mount">
+										<span class="step__view">
+											<span class="step__descr"><span>Через месяц</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="time" value="autumn">
+										<span class="step__view">
+											<span class="step__descr"><span>Осень 2017</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="time" value="next-year">
+										<span class="step__view">
+											<span class="step__descr"><span>В следующем году</span></span>
+										</span>
+									</label>
+									<label class="step__item">
+										<input type="radio" name="time" value="other">
+										<span class="step__view">
+											<span class="step__descr"><span>Другое</span></span>
+										</span>
+									</label>
+								</div>
+								<button class="btn js-finalStep disabled">Далее</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="final">
+					<h2 class="title">Благодарим за ответы! <span>Ваша скидка <span class="total__discount">2222 руб.</span> Действует в течении 10 дней</span></h2>
+					<h3 class="subtitle">Акция! До 24.09.17 каминный набор <span>В подарок!</span></h3>
+					<div class="final__info">
+						<div class="info__window cb__form">
+							<form>
+								<input type="text" name="name" placeholder="Имя" required>
+								<input type="text" name="phone" placeholder="Телефон" required>
+								<input type="text" class="hide steps" name="steps-result" readonly>
+								<input type="text" class="hide discount" name="discount-value" readonly>
+								<label class="checkbox__custom">
+									<input type="checkbox" required>
+									<span class="checker"></span>
+									Ознакомлен с условиями политики конфиденциальности
+								</label>
+								<button class="btn">Получить расчет</button>
+							</form>
+						</div>
+						<div class="info__window">
+							<h4 class="info__title">Получите</h4>
+							<p>Стоимость Вашей облицовки или портала <br> Каталог и прайс-лист <br> Список из 7 ошибок которые допускают при заказе камина</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="wrapper">
+				<div class="footer__inn">
+					ИНН 132344546657677
+				</div>
+				<div class="footer__social">
+					<a href=""><i class="icon icon_fb"></i></a>
+					<a href=""><i class="icon icon_vk"></i></a>
+					<a href=""><i class="icon icon_yt"></i></a>
+					<a href=""><i class="icon icon_inst"></i></a>
+				</div>
+			</div>
+			<div class="wrapper">
+				<div class="footer__copyrite">&copy; Copyright</div>
+			</div>
+		</footer>
+
+		<div class="modal" id="modal__cb">
+			<div class="modal__cb">
+				<button class="modal__close"></button>
+				<h3 class="modal__title">Напишите нам <br> и мы вам перезвоним</h3>
+				<form>
+					<input type="text" name="name" placeholder="Имя">
+					<input type="text" name="phone" placeholder="Телефон">
+					<textarea name="msg" cols="30" rows="6" placeholder="Сообщение"></textarea>
+					<button class="btn">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>

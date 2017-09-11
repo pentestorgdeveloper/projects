@@ -1,0 +1,222 @@
+.bm-select {
+  display: flex;
+  color: $black;
+  font-size: rem(12);
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .bm-tag {
+    background-color: $white;
+    position: relative;
+    display: flex;
+    margin: rem(0 6 6 0);
+    color: $rat;
+    z-index: 10;
+  }
+
+  .bm-cell {
+    padding: rem(8 8);
+    border: 1px solid $mouse;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .bm-active {
+    background-color: $mite;
+
+    .bm-drop {
+
+      span {
+        text-indent: 1em;
+        color: $black;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+      }
+      .bm-close {
+        display: flex;
+      }
+    }
+    .bm-input {
+      color: $black;
+    }
+  }
+  .bm-final {
+    background-color: $mite;
+
+    .bm-title {
+      cursor: default;
+    }
+  }
+
+  .bm-title {
+    text-transform: uppercase;
+    font-size: rem(10);
+    color: $rat;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+
+    &:hover ~ .bm-drop:nth-child(2) {
+
+      .bm-caret:before, .bm-caret:after {
+        background-color: $black;
+      }
+    }
+  }
+  .bm-modifier {
+    border-left: none;
+    border-right: none;
+    padding-right: 0;
+  }
+  .bm-values {
+    border-radius: 0 3px 3px 0;
+    border-left: none;
+    color: $black;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+  }
+  .bm-drop {
+    border-radius: 0 3px 3px 0;
+    margin-left: -1px;
+    cursor: pointer;
+
+    &:hover {
+
+      .bm-caret:before, .bm-caret:after {
+        background-color: $black;
+      }
+    }
+    &.bm-inner {
+      border-radius: 0;
+    }
+    &.bm-open {
+      box-shadow: 0 0 0 3px rgba($bluemoon, 0.8);
+      border-color: $blue;
+      
+      + .bm-drop {
+        border-left: 1px solid $blue;
+      }
+      .bm-caret:before, .bm-caret:after {
+        background-color: $black;
+      }
+    }
+    &.bm-more {
+
+      .bm-close {
+        display: none;
+      }
+      span {
+        color: $rat;
+        text-indent: 0;
+      }
+    }
+    .bm-dropdown {
+      position: absolute;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      left: 0;
+      border: 1px solid $mouse;
+      box-shadow: 0 0 5px $mouse;
+      background-color: $white;
+      border-radius: 3px;
+      padding: rem(6 0);
+      left: 0;
+      top: calc(100% + 2px);
+      color: $rat;
+      z-index: -1;
+
+      .bm-item {
+        padding: rem(6 12);
+        cursor: pointer;
+        line-height: 1;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: $mite;
+        }
+        &.bm-disabled {
+          background-color: $mite;
+          pointer-events: none;
+        }
+      }
+    }
+    .bm-close {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.2em;
+      height: 100%;
+      align-items: center;
+      justify-content: flex-end;
+      display: none;
+
+      &:hover {
+        color: $black;
+
+        ~ .bm-caret {
+
+          &:before, &:after {
+            background-color: $rat;
+          }
+        }
+      }
+      &:before {
+        content: '\00d7';
+        font-size: 1.2em;
+        font-style: normal;
+        font-weight: 200;
+      }
+    }
+    .bm-caret {
+      width: rem(8);
+      height: rem(10);
+      position: relative;
+      margin-left: rem(6);
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 1px;
+        background-color: $rat;
+        bottom: 5px;
+      }
+      &:before {
+        transform: rotate(45deg);
+        left: 0;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        right: 0;
+      }
+    }
+  }
+  .bm-input {
+    outline: none;
+    border-radius: 0 3px 3px 0;
+    cursor: text;
+    margin-left: -1px;
+    z-index: -1;
+
+    &:focus {
+      border-color: $blue;
+      box-shadow: 0 0 0 3px rgba($bluemoon, 0.8);
+      z-index: 1;
+    }
+    &.bm-empty:after {
+      content: attr(placeholder);
+      color: $rat;
+    }
+  }
+}

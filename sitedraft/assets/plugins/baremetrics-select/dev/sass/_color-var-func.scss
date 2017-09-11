@@ -1,0 +1,37 @@
+// Core Colors
+$black: #242E35;
+$blue: #2693D5;
+$bluemoon: #BFDEEC;
+$white: #FFFFFF;
+
+// Core Grayscale Colors
+$rat: #a1abb3;
+$mouse: #dae1e3;
+$mite: #f7f9fa;
+
+// Variables
+$font-family: "proxima-nova", Proxima Nova, "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$rem-base: 16px;
+
+// Functions
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function convert-to-rem($value, $base-value: $rem-base)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+@function rem($values, $base-value: $rem-base) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
