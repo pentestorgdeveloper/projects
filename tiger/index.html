@@ -1,0 +1,570 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>Tiger</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicon's -->
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+    <!-- Viewport -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <!-- Map -->
+    <script async src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <!-- Stylesheet's -->
+    <link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+
+<header class="header">
+  <span class="header_bg"></span>
+  <div class="header__top">
+    <div class="row">
+    <div class="large-7 column">
+      <div class="header__logo">
+        <a href="#">
+          <img src="assets/img/header_logo.png" alt="">
+        </a>
+        <p class="logo__text">Оригинальный  костюм <br> "Горка" от производителя</p>
+      </div>
+    </div>
+    <div class="large-5 column">
+      <div class="row">
+        <div class="medium-6 large-6 column">
+          <div class="header__contacts text-center">
+            <a href="tel:+79689855551" class="phone__num">+7 (968) 985-55-51</a>
+            <p class="phone__descr">Оптовые продажи</p>
+            <span data-open="modal__price" class="header__btn">Получить оптовый прайс</span>
+          </div>
+        </div>
+        <div class="medium-6 large-6 column">
+          <div class="header__contacts text-center">
+            <a href="tel:+79689855551" class="phone__num">+7 (926) 180-11-35</a>
+            <p class="phone__descr">Розничные продажи</p>
+            <span data-open="modal__order" class="header__btn">Заказать сейчас</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="header__content">
+    <div class="row">
+      <div class="large-6 column">
+        <div class="header__text">
+          <h1 class="header__title">Удобный и износостойкий костюм "Горка - Tiger" для активного отдыха <span>всего за 2 700 рублей</span></h1>
+          <ul class="header__list">
+            <li class="h-list__item icon_material">Грязеотталкивающий <br> материал</li>
+            <li class="h-list__item icon_protection">Защита от холода,<br> ветра и дождя</li>
+            <li class="h-list__item icon_cloth">Непромокаемая <br> ткань</li>
+          </ul>
+        </div>
+      </div>
+      <div class="medium-6 large-6 column">
+        <div class="header__costume">
+          <img src="assets/img/header_costume.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-8 large-offset-2 column text-center">
+        <div class="header__form">
+          <h3 class="form__title">Скидки до конца сезона!</h3>
+          <p class="form__descr">Только до 31-ого октября костюм "Горка - Tiger" со скидкой 45%</p>
+          <p class="form__price">2.700р <span class="old-price">4.400р</span></p>
+          <form action="send.php" class="ajax-form form_style js-formValidation" data-thanks="1">
+            <div class="input_wrap clearfix">
+              <label><input type="text" name="name" placeholder="Ваше имя"></label>
+              <label><input type="text" class="email" name="email" placeholder="Ваш e-mail" required></label>
+            </div>
+            <button class="btn_style order__btn">Заказать со скидкой</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="video">
+  <div class="row">
+    <div class="large-6 column">
+      <div class="video_wrap">
+        <video controls="controls" poster="assets/video/poster.jpg">
+          <source src="assets/video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+      </div>
+    </div>
+    <div class="large-6 column">
+      <div class="video__descr">
+        <h2 class="section__title video__title">О костюме серии <br> "Горка - Tiger" </h2>
+        <p class="section__text">Костюм был разработан компанией для военных структур и выдержал неоднократные проверки в полевых условиях.</p>
+        <p class="section__text">Все материалы, швы, карманы и резинки разработаны и сделаны для того, чтобы вы чувствововали себя комфортно и безопасно в любых условиях.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <diw class="row">
+    <div class="small-12 column text-center">
+      <h2 class="section__title about__title">Отлично подходит для занятий:</h2>
+    </div>
+  </diw>
+  <div class="expanded row">
+    <div class="about__scope" data-plus="1">
+      <img src="assets/img/about/about_img1.jpg" alt="">
+      <div class="scope__descr text-center">
+        <h3 class="scope__title">Туризмом</h3>
+        <ul class="scope__list text-left">
+          <li>Свободный крой костюма</li>
+          <li>100% хлопок</li>
+          <li>12 функциональных карманов</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about__scope" data-plus="2">
+      <img src="assets/img/about/about_img2.jpg" alt="">
+      <div class="scope__descr text-center">
+        <h3 class="scope__title">Рыбалкой</h3>
+        <ul class="scope__list text-left">
+          <li>Адаптирован для низких температур</li>
+          <li>Водоотталкивающая пропитка ткани</li>
+          <li>Резинки и стяжки для защиты</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about__scope" data-plus="3">
+      <img src="assets/img/about/about_img3.jpg" alt="">
+      <div class="scope__descr text-center">
+        <h3 class="scope__title">Экстримальной ездой <br> на квадрацикле</h3>
+        <ul class="scope__list text-left">
+          <li>Резинки и стяжки для защиты</li>
+          <li>Водоотталкивающая пропитка ткани</li>
+          <li>Плотные армированные накладки</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about__scope" data-plus="4">
+      <img src="assets/img/about/about_img4.jpg" alt="">
+      <div class="scope__descr text-center">
+        <h3 class="scope__title">Страйкбола <br> и пейнтбола</h3>
+        <ul class="scope__list text-left">
+          <li>Плотные армированные накладки</li>
+          <li>Свободный крой костюма</li>
+          <li>12 функциональных карманов</li>
+        </ul>
+      </div>
+    </div>
+    <div class="about__scope" data-plus="5">
+      <img src="assets/img/about/about_img5.jpg" alt="">
+      <div class="scope__descr text-center">
+        <h3 class="scope__title">Охотой</h3>
+        <ul class="scope__list text-left">
+          <li>Камуфляжный цвет</li>
+          <li>Адаптирован для низких температур</li>
+          <li>Резинки и стяжки для защиты</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="medium-6 medium-offset-3 large-4 large-offset-0 large-push-4 column">
+      <div class="about__photo text-center">
+        <img src="assets/img/about/about_costume.jpg" alt="">
+      </div>
+    </div>
+    <div class="large-4 large-pull-4 column">
+      <ul class="about__list list_right">
+        <li class="icon_temp" data-2="1" data-5="1">Адаптирован для низких температур до -25&deg;C</li>
+        <li class="icon_waterproof" data-2="1" data-3="1">Водоотталкивающая пропитка ткани</li>
+        <li class="icon_easy" data-1="1" data-4="1">Свободный крой костюма не стесняет движений</li>
+        <li class="icon_shield" data-3="1" data-4="1">Плотные армированные накладкина локтях и коленях</li>
+      </ul>
+    </div>
+    <div class="large-4 column">
+      <ul class="about__list list_left">
+        <li class="icon_pocket" data-1="1" data-4="1">12 функциональных карманов (6 на куртке, 6 на штанах)</li>
+        <li class="icon_gum" data-2="1" data-3="1" data-5="1">Резинки и стяжки для защиты от пыли и насекомых</li>
+        <li class="icon_color" data-5="1">Камуфляжный цвет - Хаки</li>
+        <li class="icon_material" data-1="1">100% хлопок, дышащий даже в любую погоду</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="composition">
+  <div class="row">
+    <div class="small-12 column">
+      <h2 class="section__title composition__title">Из чего состоит <br> костюм "Горка - Tiger" </h2>
+    </div>
+    <div class="medium-6 medium-offset-3 large-4 large-offset-0 column">
+      <div class="composition__photo js-compositionPhoto">
+        <a href="assets/img/composition/composition_img1.jpg">
+          <img src="assets/img/composition/composition_img1.jpg" alt="">
+        </a>
+      </div>
+      <div class="preview__list clearfix">
+        <a href="assets/img/composition/composition_img1.jpg" class="preview__item js-previews img_active">
+          <img src="assets/img/composition/preview_sm1.jpg" alt="">
+        </a>
+        <a href="assets/img/composition/composition_img2.jpg" class="preview__item js-previews">
+          <img src="assets/img/composition/preview_sm2.jpg" alt="">
+        </a>
+        <a href="assets/img/composition/composition_img3.jpg" class="preview__item js-previews">
+          <img src="assets/img/composition/preview_sm3.jpg" alt="">
+        </a>
+        <a href="assets/img/composition/composition_img4.jpg" class="preview__item js-previews">
+          <img src="assets/img/composition/preview_sm4.jpg" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="large-8 column">
+      <div class="composition__info">
+        <p class="section__text composition__text">Костюм "Горка - Tiger" состоит из куртки и брюк, выполненных из двух видов ткани: "палатка" и "oxford rip-stop" с армированными нитями. "Горка-Ирбис" прекрасно подходит для защиты от ветра, небольшого дождя и хлестких веток. Костюмы не стесняют движения, позволяет двигаться в любом темпе и штурмовать препятствия.</p>
+        <div class="row">
+          <div class="medium-9 large-9 column">
+            <div class="composition__form text-center">
+              <p class="form__price">2.700р <span class="old-price">4.400р</span></p>
+              <form action="send.php" class="ajax-form form_style js-formValidation" data-thanks="1">
+                <div class="input_wrap clearfix">
+                  <label><input type="text" name="name" placeholder="Ваше имя"></label>
+                  <label><input type="text" class="email" name="email" placeholder="Ваш e-mail" required></label>
+                </div>
+                <button class="btn_style order__btn">Заказать со скидкой</button>
+              </form>
+            </div>
+          </div>
+          <div class="medium-3 large-3 column">
+            <span data-open="modal__more" class="composition__more">Посмотреть подробную комплектацию костюма <span class="more_icon">&gt;</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 column">
+      <h2 class="section__title size__title">Выберите ваш размер:</h2>
+    </div>
+    <div class="small-12 column text-sm-center">
+      <ul class="size__list text-center clearfix">
+        <li>
+          <ul class="size__item">
+            <li class="section__text"><p>Рост/размер</p></li>
+            <li class="section__text">170-176</li>
+            <li class="section__text">182-188</li>
+          </ul>
+        </li>
+        <li>
+          <ul class="size__item">
+            <li class="section__text">44-46</li>
+            <li><span data-open="modal__order">мой!</span></li>
+            <li><span data-open="modal__order">мой!</span></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="size__item">
+            <li class="section__text">48-50</li>
+            <li><span data-open="modal__order">мой!</span></li>
+            <li><span data-open="modal__order">мой!</span></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="size__item">
+            <li class="section__text">52-54</li>
+            <li><span data-open="modal__order">мой!</span></li>
+            <li><span data-open="modal__order">мой!</span></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="size__item">
+            <li class="section__text">56-58</li>
+            <li><span data-open="modal__order">мой!</span></li>
+            <li><span data-open="modal__order">мой!</span></li>
+          </ul>
+        </li>
+        <li>
+          <ul class="size__item">
+            <li class="section__text">60-62</li>
+            <li><span data-open="modal__order">мой!</span></li>
+            <li><span data-open="modal__order">мой!</span></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="composition__delivery text-sm-left">
+        <div class="row">
+          <div class="medium-8 medium-offset-2 large-4 large-offset-0 large-offset-3 column">
+            <div class="delivery__item delivery_position">
+              <h3 class="delivery__title">Доставка по всей России</h3>
+              <ul class="delivery__list icon_delivery">
+                <li>Доставка по Москве</li>
+                <li class="accent">Самовывоз м. Павелецкая (г. Москва, 5-й Монетчиковский переулок, д. 38к2)</li>
+                <li>Доставка в регионы "Почтой России" наложенным платежом</li>
+              </ul>
+            </div>
+          </div>
+          <div class="medium-8 medium-offset-2 large-3 large-offset-0 large-pull-1 column end">
+            <div class="delivery__item">
+              <h3 class="delivery__title">Оплата при получении</h3>
+              <ul class="delivery__list icon_receipt">
+                <li class="accent">Наличными курьеру</li>
+                <li>Сбербанкой онлайн</li>
+                <li>Яндекс деньги</li>
+                <li>Qiwi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="catalog">
+  <div class="row small-12 column">
+    <h2 class="section__title catalog__title">Каталог продукции</h2>
+  </div>
+  <div class="row">
+    <div class="large-8 large-offset-2 column">
+      <div class="catalog__list text-center clearfix">
+        <div class="catalog__item">
+          <div class="catalog__img">
+            <img src="assets/img/catalog/catalog_img1.jpg" alt="">
+          </div>
+          <div class="catalog__descr">
+            <h3 class="catalog__name">Горка - tiger</h3>
+            <p class="catalog__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <a href="#" class="catalog__order" data-price="2700">Выбрать</a>
+            <span data-open="modal__more" class="catalog__more">Подробнее...</span>
+          </div>
+        </div>
+        <div class="catalog__item">
+          <div class="catalog__img">
+            <img src="assets/img/catalog/catalog_img2.jpg" alt="">
+          </div>
+          <div class="catalog__descr">
+            <h3 class="catalog__name">Берцы</h3>
+            <p class="catalog__text">Lexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <a href="#" class="catalog__order" data-price="1500">Выбрать</a>
+            <span data-open="modal__more" class="catalog__more">Подробнее...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gross text-center">
+  <span class="gross_bg"></span>
+  <div class="row">
+    <div class="small-12 column">
+      <h2 class="gross__title">Оптовым покупателям</h2>
+    </div>
+    <div class="large-8 large-offset-2 column">
+      <h3 class="gross__subtitle">Мы являемся производителями и можем гарантировать вам лучшую цену на оптовые заказы!</h3>
+    </div>
+    <div class="large-6 large-offset-3 column end">
+      <div class="gross__form">
+        <h3 class="form__title">Оставьте заявку, и наш менеджер расскажет Вам об актуальных оптовых скидках</h3>
+        <form action="send.php" class="ajax-form form_style js-formValidation" data-thanks="1">
+          <div class="input_wrap clearfix">
+            <label><input type="text" name="name" placeholder="Ваше имя"></label>
+            <label><input type="text" class="email" name="email" placeholder="Ваш e-mail" required></label>
+          </div>
+          <button class="btn_style order__btn">Заказать со скидкой</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="row">
+    <div class="large-6 large-offset-5 column">
+      <h2 class="section__title reviews__title">Отзывы наших клиентов</h2>
+      <ul class="reviews__list js-reviewsCarousel">
+        <li class="section__text">Заказывали с мужиками для рыбалки несколько сразу, пришло все за 6 дней почтой, получили пару дней назад, все нравится, качество “горки” хорошее, ткань прочная, для рыбалки и охоты самое оно! Как холоднее будет, закажу тут же зимнюю версию.</li>
+        <li class="section__text">Заказывали с мужиками для рыбалки несколько сразу, пришло все за 6 дней почтой, получили пару дней назад, все нравится, качество “горки” хорошее, ткань прочная, для рыбалки и охоты самое оно! Как холоднее будет.</li>
+        <li class="section__text">Заказывали с мужиками для рыбалки несколько сразу, пришло все за 6 дней почтой, получили пару дней назад, все нравится, качество “горки” хорошее.</li>
+        <li class="section__text">Заказывали с мужиками для рыбалки несколько сразу, пришло все за 6 дней почтой, получили пару дней назад, все нравится, качество “горки” хорошее, ткань прочная, для рыбалки и охоты самое оно! Как холоднее будет, закажу тут же зимнюю версию. Как холоднее будет, закажу тут же зимнюю версию.</li>
+      </ul>
+      <div class="customNavigation">
+        <a href="#" class="navPrev js-prev">&lt;</a>
+        <a href="#" class="navNext js-next">&gt;</a>
+      </div>
+      <p class="reviews__text">Вы можете отправить нам на почту свой отзыв: <a href="mailto:pochta@dom.ru">pochta@dom.ru</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="contacts text-center">
+  <div class="row">
+    <div class="small-12 column">
+      <ul class="contacts__list clearfix">
+        <li class="icon_phone">
+          <a href="tel:89689855551">8 (968) 985-55-51</a>
+          <a href="tel:89261801135">8 (926) 180-11-35</a>
+        </li>
+        <li class="icon_email vfix">
+          <a href="mailto:dogidog@maildog.ru" class="contacts__mail">dogidog@maildog.ru</a>
+        </li>
+        <li class="icon_time">
+          <p>10:00 - 20:00</p>
+          <span>(ежедневно)</span>
+        </li>
+      </ul>
+    </div>
+    <div class="large-4 large-offset-8 column">
+      <div class="contacts__address">
+        <h2 class="section__title">Наш офис</h2>
+        <p class="address__descr">Мы всегда готовы проконсультировать вас по любым вопросам</p>
+        <h3 class="address__title">г. Москва, 5-й Монетчиковский переулок, д. 38к2</h3>
+        <span data-open="modal__callback" class="btn_style address__btn">Задать вопрос</span>
+      </div>
+    </div>
+  </div>
+  <div id="map" class="map"></div>
+</section>
+
+<footer class="footer">
+  <div class="row">
+    <div class="medium-7 large-6 column">
+      <div class="footer__logo">
+        <img src="assets/img/footer_logo.png" alt="">
+        <p class="logo__text">Оригинальный  костюм <br> "Горка" от производителя</p>
+      </div>
+    </div>
+    <div class="medium-5 large-6 column">
+      <p class="copyrite">Разработка: Thelandpage</p>
+    </div>
+  </div>
+</footer>
+
+<div class="basket">
+  <div class="row">
+    <div class="small-9 column text-center">
+      <h4>Товаров в корзине:
+        <span class="js-prodCount">0</span>. Полная стоимость:
+        <span class="js-prodPrice">0</span>
+      </h4>
+    </div>
+    <div class="small-3 column">
+      <span class="btn_style basket__btn" data-open="modal__order" aria-haspopup="true" tabindex="0">Оформить заказ</span>
+    </div>
+  </div>
+</div>
+<div class="hidden">
+  <div id="modal__thanks" class="modal__thanks modal_close js-thanks small text-center reveal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">X</span>
+    </button>
+    <h3 class="thanks__title">Спасибо!</h3>
+    <span class="thanks__text">Ваша заявка на заказ принята</span>
+    <span class="thanks__text">Мы свяжемся с вами в течение 10 минут</span>
+  </div>
+  <div id="modal__more" class="modal__more modal_close reveal clearfix" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">X</span>
+    </button>
+    <div class="more__img">
+      <div class="composition__photo js-compositionPhoto">
+        <a href="assets/img/composition/composition_img1.jpg">
+          <img src="assets/img/composition/composition_img1.jpg" alt="">
+        </a>
+      </div>
+      <div class="preview__list clearfix">
+        <a href="assets/img/composition/composition_img1.jpg" class="preview__item js-previews img_active">
+          <img src="assets/img/composition/preview_sm1.jpg" alt="">
+        </a>
+        <a href="assets/img/composition/composition_img2.jpg" class="preview__item js-previews">
+          <img src="assets/img/composition/preview_sm2.jpg" alt="">
+        </a>
+        <a href="assets/img/composition/composition_img3.jpg" class="preview__item js-previews">
+          <img src="assets/img/composition/preview_sm3.jpg" alt="">
+        </a>
+        <a href="assets/img/composition/composition_img4.jpg" class="preview__item js-previews">
+          <img src="assets/img/composition/preview_sm4.jpg" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="more__descr">
+      <h2 class="modal__title more__title text-center">Комплектация</h2>
+      <p class="more__text">Костюм состоит из куртки и брюк.</p>
+      <ul class="more__list">
+        <li>КУРТКА (Горка - Tiger)</li>
+        <li>- Основной материал — палаточная ткань высокой прочности.</li>
+        <li>- Усиленные накладки из ткани "oxford rip-stop" в плечевой области.</li>
+        <li>- Дополнительные накладки на рукавах в области локтей.</li>
+        <li>- Манжеты с встроенными резинками выполнены из ткани oxford rip-stop.</li>
+        <li>- В области талии по бокам вшиты резинки.</li>
+        <li>- Внизу куртки проходит утяжка с фиксаторами.</li>
+        <li>- В предплечье вшиты резинки для утяжки.</li>
+        <li>- Капюшон с регулировкой в двух измерениях: по овалу лица и регулировкой бокового зрения.</li>
+        <li>- Внизу куртки два кармана с клапанами на пуговицах.</li>
+        <li>- По одному карману на липучке на каждом рукове куртки.</li>
+      </ul>
+      <ul class="more__list">
+        <li>БРЮКИ (Горка - Tiger)</li>
+        <li>- Основной материал — палаточная ткань высокой прочности.</li>
+        <li>- Накладки из ткани "oxford rip-stop" (колени, седалище и голени)</li>
+        <li>- Ширинка на молнии.</li>
+        <li>- В комплекте специальные подтяжки, крепящиеся по бокам на защелки-фастекс.</li>
+        <li>- Широкие шлевки для ремня.</li>
+        <li>- Карманы: 2 прорезных кармана по бокам, 2 набедренных грузовых кармана с клапанами, 2 задних кармана на пуговицах.</li>
+        <li>- В области талии и голени вшиты утягивающие резинки.</li>
+        <li>- Пыльники для защиты от насекомых по низу штанин.</li>
+      </ul>
+    </div>
+  </div>
+  <div id="modal__callback" class="modal__callback modal_close text-center reveal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">X</span>
+    </button>
+    <h2 class="modal__title">Задайте вопрос нашему менеджеру</h2>
+    <form action="send.php" class="ajax-form modal_style js-formValidation">
+      <label><input type="text" name="name" placeholder="Введите ваше имя"></label>
+      <label><input type="text" class="phone" name="phone" placeholder="Введите ваш телефон" required></label>
+      <label><textarea name="msg" placeholder="Текст сообщения"></textarea></label>
+      <button class="btn_style modal__btn">Заказать сейчас</button>
+    </form>
+  </div>
+  <div id="modal__price" class="modal__callback modal_close text-center reveal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">X</span>
+    </button>
+    <h2 class="modal__title">Получить оптовый прайс</h2>
+    <form action="send.php" class="ajax-form modal_style js-formValidation">
+      <label><input type="text" name="name" placeholder="Введите ваше имя"></label>
+      <label><input type="text" class="phone" name="phone" placeholder="Введите ваш телефон" required></label>
+      <label><textarea name="msg" placeholder="Текст сообщения"></textarea></label>
+      <button class="btn_style modal__btn">Заказать сейчас</button>
+    </form>
+  </div>
+  <div id="modal__order" class="modal__order modal_close reveal" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">X</span>
+    </button>
+    <div class="m-order__img text-center">
+      <img src="assets/img/modal_order.png" alt="">
+    </div>
+    <div class="m-order__descr">
+      <h2 class="modal__title">Оставьте заявку <br> на заказ костюма "Горка - Tiger"</h2>
+      <form action="send.php" class="ajax-form modal_style js-formValidation">
+        <label><input type="text" name="name" placeholder="Введите ваше имя"></label>
+        <label><input type="text" class="phone" name="phone" placeholder="Введите ваш телефон" required></label>
+        <button class="btn_style modal__btn">Заказать сейчас</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/js/app.dart.js"></script>
+<script src="./assets/js/app.js"></script>
+</body>
+</html>
